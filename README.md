@@ -1,0 +1,1 @@
+Application to store and calculate home budget events.
