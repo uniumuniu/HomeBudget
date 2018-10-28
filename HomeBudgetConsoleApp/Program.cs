@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using HomeBudgetData;
 using HomeBudgetLibrary;
 
 namespace HomeBudgetConsoleApp
@@ -7,15 +9,54 @@ namespace HomeBudgetConsoleApp
     {
         static void Main(string[] args)
         {
-            string[] users = BudgetService.GetUsers();
+            Console.WriteLine("Type:");
+            Console.WriteLine("su - to show users");
+            Console.WriteLine("st - to show transactions");
+            //Console.WriteLine("a - to add transaction");
+            //Console.WriteLine("sb - to show balance");
+            Console.WriteLine();
 
-            foreach(var user in users)
+            string command = Console.ReadLine();
+
+            if (command == "su")
             {
-                Console.WriteLine(user);
+                ShowUsers();
             }
 
             Console.WriteLine();
             Console.ReadKey();
+        }
+
+        static BudgetService BudgetService { get; } = new BudgetService();
+
+        static void ShowUsers()
+        {
+            List<User> users = BudgetService.GetUsers();
+
+            foreach (var user in users)
+            {
+                Console.WriteLine(user.Name);
+            }
+        }
+
+        static void ShowTransactions()
+        {
+            List<Transaction> transactions = BudgetService.GetTransactions();
+
+            foreach (var transaction in transactions)
+            {
+                //Console.WriteLine();
+            }
+        }
+
+        static void AddTransaction()
+        {
+
+        }
+
+        static void ShowBalance()
+        {
+
         }
     }
 }
