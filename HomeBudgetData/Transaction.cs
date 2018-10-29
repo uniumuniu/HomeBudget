@@ -19,5 +19,8 @@ namespace HomeBudgetData
         public TransactionType Type { get; set; }
 
         public string Info { get; set; }
+
+
+        public User User { get; set; }
     }
 }

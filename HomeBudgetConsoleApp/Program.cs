@@ -9,19 +9,21 @@ namespace HomeBudgetConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Type:");
-            Console.WriteLine("su - to show users");
-            Console.WriteLine("st - to show transactions");
-            //Console.WriteLine("a - to add transaction");
-            //Console.WriteLine("sb - to show balance");
-            Console.WriteLine();
+            ShowTransactions();
 
-            string command = Console.ReadLine();
+            //Console.WriteLine("Type:");
+            //Console.WriteLine("su - to show users");
+            //Console.WriteLine("st - to show transactions");
+            ////Console.WriteLine("a - to add transaction");
+            ////Console.WriteLine("sb - to show balance");
+            //Console.WriteLine();
 
-            if (command == "su")
-            {
-                ShowUsers();
-            }
+            //string command = Console.ReadLine();
+
+            //if (command == "su")
+            //{
+            //    ShowUsers();
+            //}
 
             Console.WriteLine();
             Console.ReadKey();
@@ -45,7 +47,7 @@ namespace HomeBudgetConsoleApp
 
             foreach (var transaction in transactions)
             {
-                //Console.WriteLine();
+                ;
             }
         }
 
